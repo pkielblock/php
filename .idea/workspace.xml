@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5eea3bf9-8ba2-40c5-89f2-9e78812a3611" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Files/02-htmlinphp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/06-Numbes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/07-userInput.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/05-strings.php" beforeDir="false" afterPath="$PROJECT_DIR$/Files/05-strings.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,17 +39,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.xml" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.06-Numbes.php">
     <configuration name="05-strings.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Files/05-strings.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 8.1" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <configuration name="06-Numbes.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Files/06-Numbes.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.06-Numbes.php" />
         <item itemvalue="PHP Script.05-strings.php" />
       </list>
     </recent_temporary>
@@ -66,6 +78,12 @@
       <workItem from="1643769689547" duration="96000" />
       <workItem from="1643769810961" duration="673000" />
       <workItem from="1644015374986" duration="3595000" />
+      <workItem from="1645623400856" duration="191000" />
+      <workItem from="1645623969212" duration="393000" />
+      <workItem from="1645624384862" duration="948000" />
+      <workItem from="1645625563001" duration="122000" />
+      <workItem from="1645625709616" duration="393000" />
+      <workItem from="1645626130345" duration="2833000" />
     </task>
     <servers />
   </component>
