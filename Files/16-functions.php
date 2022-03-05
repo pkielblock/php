@@ -1,6 +1,7 @@
 <?php
 
-function sayHi(string $name, int $age){
+function sayHi(string $name, int $age): void
+{
     echo 'Hi ' . $name . ', you are ' . $age . ' years old.' . PHP_EOL;
 }
 
