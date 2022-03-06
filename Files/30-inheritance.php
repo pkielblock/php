@@ -1,28 +1,28 @@
 <?php
 
 class Chef {
-    function makeChicken(): void
+    public function makeChicken(): void
     {
         echo 'The chef makes chicken' . PHP_EOL;
     }
 
-    function makeSalad(): void
+    public function makeSalad(): void
     {
         echo 'The chef makes salad' . PHP_EOL;
     }
 
-    function makeSpecialDish(): void
+    public function makeSpecialDish(): void
     {
         echo 'The chef makes stroganoff' . PHP_EOL;
     }
 }
 
 class ItalianChef extends Chef {
-    function makePasta(): void
+    public function makePasta(): void
     {
         echo 'The chef makes pasta' . PHP_EOL;
     }
-    function makeSpecialDish(): void
+    public function makeSpecialDish(): void
     {
         echo 'The chef makes bread' . PHP_EOL;
     }

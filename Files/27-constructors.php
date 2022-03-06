@@ -5,7 +5,7 @@ class Book {
     public string $author;
     public int $pages;
 
-    function __construct(string $bookTitle, string $bookAuthor, int $bookPages)
+    public function __construct(string $bookTitle, string $bookAuthor, int $bookPages)
     {
         $this->title = $bookTitle;
         $this->author = $bookAuthor;

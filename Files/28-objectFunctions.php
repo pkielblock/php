@@ -5,7 +5,7 @@ class Student {
     public string $major;
     public float $gpa;
 
-    function __construct(string $name, string $major, float $gpa)
+    public function __construct(string $name, string $major, float $gpa)
     {
         $this->name = $name;
         $this->major = $major;

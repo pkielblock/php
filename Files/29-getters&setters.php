@@ -15,7 +15,7 @@ class Movie {
         return $this->rating;
     }
 
-    function setRating(string $rating): void
+    public function setRating(string $rating): void
     {
         if ($rating == 'PG' || $rating == 'PG-13'){
             $this->rating = $rating;
