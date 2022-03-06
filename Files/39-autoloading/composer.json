@@ -1,0 +1,17 @@
+{
+    "name": "pkielblock/39-autoloading",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Kielblock",
+            "email": "p.kielblock123@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    }
+}
