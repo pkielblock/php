@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $.getJSON('https://viacep.com.br/ws/09132130/json/', function (dados){
+        enviaParaPHP(dados);
+    });
+
+    function enviaParaPHP(dados){
+        let json = JSON.stringify(dados);
+        $.ajax({
+            url: '44-jsonEnvia.php',
+            data: { texto: json },
+            type: 'POST',
+            success: function (retorno){
+                let objeto = JSON.parse(retorno);
+                console.log(objeto.cep);
+            },
+            error: function (erro){
+                alert('Erro');
+            }
+        });
+    }
+</script>
+</body>
+</html>
