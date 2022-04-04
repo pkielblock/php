@@ -6,13 +6,36 @@ require('db/connection.php');
 //$sql->execute();
 
 //Correct/safe method | no sql injection
-if(isset($_POST['salvar'])){
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
+if(isset($_POST['salvar']) && isset($_POST['nome']) && isset($_POST['email'])){
+
+    $nome = limparPost($_POST['nome']);
+    $email = limparPost($_POST['email']);
     $data = date('d-m-Y');
+
+    //Validating empty fields
+    if($nome == "" || $nome == null){
+        echo "<b style='color:red'>Nome não pode ser vazio</b>" . PHP_EOL;
+        exit();
+    }
+    if($email == "" || $email == null){
+        echo "<b style='color:red'>Email não pode ser vazio</b>" . PHP_EOL;
+        exit();
+    }
+
+    //Validating Name and Email
+    if (!preg_match("/^[a-zA-Z-' ]*$/", $nome)) {
+        echo "<b style='color:red'>Somente letras e espaços são permitidos</b>" . PHP_EOL;
+        exit();
+    }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<b style='color:red'>Formato de Email Inválido</b>" . PHP_EOL;
+        exit();
+    }
 
     $sql = $pdo->prepare("INSERT INTO clientes VALUES(null,?,?,?)");
     $sql->execute(array($nome, $email, $data));
+
+    echo "<b style='color:lightgreen'>Cliente inserido com successo</b>" . PHP_EOL;
 }
 ?>
 <!doctype html>
@@ -25,7 +48,7 @@ if(isset($_POST['salvar'])){
 </head>
 <body>
 <h1>Inserindo Dados</h1>
-<form action= "insert.php" method="POST">
+<form method="post">
     <label>
         Digite Seu Nome: <input type="text" name="nome" placeholder="Nome" required>
     </label>
