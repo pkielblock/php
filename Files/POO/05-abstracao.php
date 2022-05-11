@@ -4,45 +4,40 @@ abstract class Banco
 {
     protected float $saldo;
 
-    protected function getSaldo(): float
+    public function getSaldo(): float
     {
         return $this->saldo;
     }
 
-    protected function setSaldo($saldo): void
+    public function setSaldo($saldo): void
     {
         $this->saldo = $saldo;
     }
 
-    abstract protected function sacar();
-    abstract protected function depositar();
+    abstract protected function sacar(float $saque);
+    abstract protected function depositar(float $deposito);
 }
 
 class Nubank extends Banco
 {
-    public function sacar()
+    public function sacar(float $saque): float
     {
-        echo "Sacou" . PHP_EOL;
+        return $this->saldo -= $saque;
     }
 
-    public function depositar()
+    public function depositar(float $deposito): float
     {
-        echo "Depositou" . PHP_EOL;
-    }
-}
-
-class Santander extends Banco
-{
-    public function sacar()
-    {
-        echo "Sacou" . PHP_EOL;
-    }
-
-    public function depositar()
-    {
-        echo "Depositou" . PHP_EOL;
+        return $this->saldo += $deposito;
     }
 }
 
 $nubank = new Nubank();
-$santander = new Santander();
+
+$nubank->setSaldo(1000);
+echo "Saldo: " . $nubank->getSaldo() . PHP_EOL;
+
+$nubank->depositar(5000);
+echo "Saldo Após Depósito: " . $nubank->getSaldo() . PHP_EOL;
+
+$nubank->sacar(2500);
+echo "Saldo Após Saque: " . $nubank->getSaldo() . PHP_EOL;
